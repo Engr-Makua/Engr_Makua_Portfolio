@@ -39,5 +39,5 @@ jobs:
     # Optional: Run container (for test/stage/demo purposes)
     - name: Run container
       run: |
-        docker run -d -p 20:80 --name portfolio_container engrmakua/testrepo:latest
+        docker run -d -p 8080:80 --name portfolio_container engrmakua/testrepo:latest
 
