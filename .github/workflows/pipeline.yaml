@@ -33,9 +33,8 @@ jobs:
 
     - name: Push Docker image (latest and sha)
       run: |
-       
-        docker engrmakua/testrepo:latest
-        docker engrmakua/testrepo:${{ github.sha }}
+        docker push engrmakua/testrepo:latest
+        docker push engrmakua/testrepo:${{ github.sha }}
 
     # Optional: Run container (for test/stage/demo purposes)
     - name: Run container
