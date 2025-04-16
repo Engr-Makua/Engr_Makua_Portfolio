@@ -24,7 +24,7 @@ jobs:
 
     - name: Build Docker image
       run: |
-        docker build -t engrmakua/testrepo:latest
+        docker build -t engrmakua/testrepo:latest .
 
     - name: Tag Docker image
       run: |
