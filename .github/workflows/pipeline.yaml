@@ -41,3 +41,18 @@ jobs:
       run: |
         docker run -d -p 8080:80 --name portfolio_container engrmakua/testrepo:latest
 
+
+
+  deployment:
+    runs-on: ubuntu-latest
+    needs:
+     -docker
+
+    steps:
+    - 
+      name: Connect to remote server
+      run:
+        cat ${{ vars.PRIVATE_SSH_KEY }} > key.pem
+        cat key.pem
+        ls -la
+    
